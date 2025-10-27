@@ -5,7 +5,7 @@ html {
     font-family: 'Segoe UI', sans-serif;
     display: flex;
     justify-content: center;
-    align-items:  center;
+    align-items: center;
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -29,8 +29,6 @@ html {
     opacity: 0.8;
     z-index: -1;
 }
-
-
 
 
 
@@ -173,7 +171,6 @@ main form i {
 }
 
 
-
 /* Responsive for small screens */
 @media only screen and (max-width: 800px) {
     main {
@@ -240,12 +237,9 @@ main form i {
     }
 }
 
-/* iPhone SE / very small screens */
+
 @media only screen and (max-width: 360px) {
 
-
-    
-    /* Both cards full width */
     .weather-main,
     .weather-details {
         width: 100%;
@@ -254,22 +248,29 @@ main form i {
         box-sizing: border-box;
     }
 
-    /* Temperature and city text smaller */
-    .weather-main h1 { font-size: 32px; }
-    .weather-main h3 { font-size: 18px; }
-    .weather-main p { font-size: 12px; }
 
-    /* Stack weather details vertically */
-    .weather-details .row > .col-6 {
-        flex: 0 0 100%;    
+    .weather-main h1 {
+        font-size: 32px;
+    }
+
+    .weather-main h3 {
+        font-size: 18px;
+    }
+
+    .weather-main p {
+        font-size: 12px;
+    }
+
+
+    .weather-details .row>.col-6 {
+        flex: 0 0 100%;
         max-width: 100%;
     }
 
-    /* Weather-box styling */
     .weather-box {
         display: flex;
-        flex-wrap: wrap;       
-        align-items: flex-start; 
+        flex-wrap: wrap;
+        align-items: flex-start;
         gap: 5px;
         font-size: 12px;
         padding: 10px;
@@ -283,16 +284,14 @@ main form i {
     }
 
     .weather-box span {
-        white-space: normal;   
+        white-space: normal;
         flex: 1 1 auto;
     }
 
-    
     .weather-icon {
         width: 70px;
     }
 
-    
     .weather-cards {
         flex-direction: column;
         gap: 10px;
