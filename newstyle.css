@@ -174,55 +174,6 @@ main form i {
 
 
 
-
-
-/* Weekly Forecast */
-.weather-forecast h4 {
-    color: #0f172a;
-    font-weight: 600;
-    /* padding-left: 10px; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-}
-
-.forecast-cards {
-    /* padding-left: 100px; */
-    display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding-bottom: 5px;
-}
-
-.forecast-cards::-webkit-scrollbar {
-    height: 6px;
-}
-
-.forecast-cards::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 3px;
-}
-
-.forecast-card {
-    min-width: 80px;
-    flex: 0 0 auto;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s;
-}
-
-.forecast-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.forecast-icon {
-    width: 40px;
-    margin: 5px 0;
-}
-
 /* Responsive for small screens */
 @media only screen and (max-width: 800px) {
     main {
@@ -310,15 +261,15 @@ main form i {
 
     /* Stack weather details vertically */
     .weather-details .row > .col-6 {
-        flex: 0 0 100%;    /* full width for each box */
+        flex: 0 0 100%;    
         max-width: 100%;
     }
 
     /* Weather-box styling */
     .weather-box {
         display: flex;
-        flex-wrap: wrap;       /* allow text to wrap */
-        align-items: flex-start; /* align icon at top */
+        flex-wrap: wrap;       
+        align-items: flex-start; 
         gap: 5px;
         font-size: 12px;
         padding: 10px;
@@ -332,16 +283,16 @@ main form i {
     }
 
     .weather-box span {
-        white-space: normal;   /* allow text wrap */
+        white-space: normal;   
         flex: 1 1 auto;
     }
 
-    /* Main weather icon smaller */
+    
     .weather-icon {
         width: 70px;
     }
 
-    /* Stack the two cards vertically */
+    
     .weather-cards {
         flex-direction: column;
         gap: 10px;
