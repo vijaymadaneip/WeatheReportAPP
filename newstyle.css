@@ -1,0 +1,349 @@
+body,
+html {
+    height: auto;
+    min-height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 90%;
+    max-width: 900px;
+    padding: 30px 0;
+    margin: 40px auto;
+}
+
+/* Background image */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('assets/bg.jpg') center/cover no-repeat;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+/* Search bar */
+main form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+
+
+/* Combine input and button styles */
+main form input,
+main form button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+main form i {
+    opacity: 0.6;
+}
+
+
+
+
+
+/* Weather cards */
+.weather-cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+
+.card-glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.card-glass:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+
+.weather-main h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #0f172a;
+}
+
+.weather-main h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #1e40af;
+}
+
+.weather-main p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #334155;
+}
+
+.weather-icon {
+    width: 100px;
+    margin: 10px 0;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+
+/* Weather detail boxes with icons */
+.weather-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
+    border-radius: 15px;
+    padding: 15px;
+    height: 70px;
+    transition: transform 0.3s, color 0.3s;
+    font-weight: bold;
+    color: #0f172a;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.weather-box i {
+    font-size: 20px;
+    color: #1e40af;
+    min-width: 20px;
+    text-align: center;
+}
+
+
+.weather-box i.fa-sun {
+    color: #f59e0b;
+
+}
+
+
+.weather-box i.fa-moon {
+    color: #f97316;
+}
+
+
+.weather-box:hover {
+    transform: translateY(-5px);
+}
+
+
+
+
+
+/* Weekly Forecast */
+.weather-forecast h4 {
+    color: #0f172a;
+    font-weight: 600;
+    /* padding-left: 10px; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.forecast-cards {
+    /* padding-left: 100px; */
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.forecast-cards::-webkit-scrollbar {
+    height: 6px;
+}
+
+.forecast-cards::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.forecast-card {
+    min-width: 80px;
+    flex: 0 0 auto;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.forecast-icon {
+    width: 40px;
+    margin: 5px 0;
+}
+
+/* Responsive for small screens */
+@media only screen and (max-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    main form {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 8px;
+        width: 100%;
+        padding: 5px;
+    }
+
+    main form input,
+    main form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main form button {
+        justify-content: center;
+        padding: 10px 0;
+    }
+
+    .weather-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .weather-details {
+        padding: 20px 15px;
+    }
+
+    .forecast-cards {
+        gap: 10px;
+        padding-left: 0;
+        overflow-x: auto;
+    }
+
+    .forecast-card {
+        min-width: 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    main form {
+        flex-direction: row;
+        align-items: stretch;
+        width: 100%;
+        gap: 5px;
+    }
+
+    main form input,
+    main form button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    main form button {
+        justify-content: center;
+        padding: 10px 0;
+    }
+}
+
+/* iPhone SE / very small screens */
+@media only screen and (max-width: 360px) {
+
+
+    
+    /* Both cards full width */
+    .weather-main,
+    .weather-details {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    /* Temperature and city text smaller */
+    .weather-main h1 { font-size: 32px; }
+    .weather-main h3 { font-size: 18px; }
+    .weather-main p { font-size: 12px; }
+
+    /* Stack weather details vertically */
+    .weather-details .row > .col-6 {
+        flex: 0 0 100%;    /* full width for each box */
+        max-width: 100%;
+    }
+
+    /* Weather-box styling */
+    .weather-box {
+        display: flex;
+        flex-wrap: wrap;       /* allow text to wrap */
+        align-items: flex-start; /* align icon at top */
+        gap: 5px;
+        font-size: 12px;
+        padding: 10px;
+        height: auto;
+        word-break: break-word;
+    }
+
+    .weather-box i {
+        font-size: 18px;
+        margin-bottom: 2px;
+    }
+
+    .weather-box span {
+        white-space: normal;   /* allow text wrap */
+        flex: 1 1 auto;
+    }
+
+    /* Main weather icon smaller */
+    .weather-icon {
+        width: 70px;
+    }
+
+    /* Stack the two cards vertically */
+    .weather-cards {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
