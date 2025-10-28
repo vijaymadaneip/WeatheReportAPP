@@ -6,8 +6,7 @@ const form = document.getElementById("weatherForm");
 const cityInput = document.getElementById("cityInput");
 const mainCard = document.querySelector(".weather-main");
 const detailCard = document.querySelector(".weather-details");
-const forecastContainer = document.querySelector(".forecast-cards ");
-// const forecast = document.querySelector(".weather-forecast");
+
 
 //city search
 form.addEventListener("submit", async (e) => {
@@ -46,8 +45,7 @@ async function fetchWeather(city) {
 function showError(message) {
     mainCard.innerHTML = `<p class="text-danger fw-bold text-center">${message}</p>`;
     detailCard.innerHTML = "";
-    forecastContainer.innerHTML = "";
-    // forecast.innerHTML = "";
+   
 }
 
 //display function to render on ui
